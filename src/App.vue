@@ -1,13 +1,13 @@
 <script setup>
 import { RouterView } from 'vue-router'
+import Footer from "@/components/Footer.vue";
+import Header from "@/components/Header.vue";
 </script>
 
 <template>
-  <router-view v-slot="{ Component }">
-    <keep-alive exclude="ProfilePage">
-      <component :is="Component" />
-    </keep-alive>
-  </router-view>
+  <Header/>
+  <router-view></router-view>
+  <Footer/>
 </template>
 
 <style scoped>
